@@ -1,6 +1,6 @@
 from random import randrange
 
-#Period 2
+# Period 2
 """
 t1A = "AndrewA" # 8
 t1B = "AndrewB" # 7
@@ -24,22 +24,22 @@ t4A = "LolaA" # 6
 t4B = "LolaB" # 5
 """
 
-#Period 5
-t1A = "AkA" # 5
-t1B = "AkB" # 6
-t2A = "ColinA"   # 3
-t2B = "ColinB"   # 4
-t3A = "ValerieA" # 2
-t3B = "ValerieB" # 1
-t4A = "ZacheryA" # 7
-t4B = "ZacheryB" # 8
+# Period 5
+t1A = "AkA"  # 5
+t1B = "AkB"  # 6
+t2A = "ColinA"  # 3
+t2B = "ColinB"  # 4
+t3A = "ValerieA"  # 2
+t3B = "ValerieB"  # 1
+t4A = "ZacheryA"  # 7
+t4B = "ZacheryB"  # 8
 
 # Make an array
 scrum = \
-[t1A, t1B,
-t2A, t2B, 
-t3A, t3B, 
-t4A, t4B]
+    [t1A, t1B,
+     t2A, t2B,
+     t3A, t3B,
+     t4A, t4B]
 
 # Random Select of scrum
 i = randrange(8)
@@ -47,7 +47,7 @@ print(scrum[i])
 
 # random Select of group
 i = randrange(4)
-group = scrum[i*2]
+group = scrum[i * 2]
 print(group[0:-1])
 
 # random Selection of A or B of scrum

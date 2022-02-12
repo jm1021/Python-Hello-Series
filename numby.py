@@ -16,15 +16,14 @@ Explore online tutorials
 https://www.w3schools.com/python/python_numbers.asp
 https://www.tutorialspoint.com/python/python_numbers.htm
 """
-print("Hello Series: numby.py")   #identification message
+print("Hello Series: numby.py")  # identification message
 
-num1 = 1    # int
+num1 = 1  # int
 num2 = 2.8  # float
-num3 = 3+1j   # complex
+num3 = 3 + 1j  # complex
 print(num1)
 print(num2)
 print(num3)
-
 
 # Arithmetic
 # Addition

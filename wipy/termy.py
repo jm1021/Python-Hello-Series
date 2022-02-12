@@ -32,57 +32,58 @@ Cyan: \u001b[46m
 White: \u001b[47m
 """
 
-BUILDER_ESCAPE        = "\033["
-SAVE_CURSOR           = "\033[s"
-RESTORE_CURSOR        = "\033[u"
+BUILDER_ESCAPE = "\033["
+SAVE_CURSOR = "\033[s"
+RESTORE_CURSOR = "\033[u"
 
-ANSI_CLEAR_SCREEN     = u"\u001B[2J"
-ANSI_HOME_CURSOR      = u"\u001B[0;0H"
-ANSI_CURSOR_UP        = u"\u001B[1A"
-ANSI_CURSOR_DOWN      = u"\u001B[1B"
-ANSI_CURSOR_FORWARD   = u"\u001B[1C"
-ANSI_CURSOR_BACKWARD  = u"\u001B[1D"
-ANSI_END_OF_LINE      = u"\u001B[1000C" # big number
-ANSI_BEGINNING_OF_LINE= u"\u001B[1000D" # big number
+ANSI_CLEAR_SCREEN = u"\u001B[2J"
+ANSI_HOME_CURSOR = u"\u001B[0;0H"
+ANSI_CURSOR_UP = u"\u001B[1A"
+ANSI_CURSOR_DOWN = u"\u001B[1B"
+ANSI_CURSOR_FORWARD = u"\u001B[1C"
+ANSI_CURSOR_BACKWARD = u"\u001B[1D"
+ANSI_END_OF_LINE = u"\u001B[1000C"  # big number
+ANSI_BEGINNING_OF_LINE = u"\u001B[1000D"  # big number
 
-ANSI_RESET            = u"\u001B[0m"
-ANSI_BLACK            = u"\u001B[30m"
-ANSI_RED              = u"\u001B[31m"
-ANSI_GREEN            = u"\u001B[32m"
-ANSI_YELLOW           = u"\u001B[33m"
-ANSI_BLUE             = u"\u001B[34m"
-ANSI_PURPLE           = u"\u001B[35m"
-ANSI_CYAN             = u"\u001B[36m"
-ANSI_WHITE            = u"\u001B[37m"
+ANSI_RESET = u"\u001B[0m"
+ANSI_BLACK = u"\u001B[30m"
+ANSI_RED = u"\u001B[31m"
+ANSI_GREEN = u"\u001B[32m"
+ANSI_YELLOW = u"\u001B[33m"
+ANSI_BLUE = u"\u001B[34m"
+ANSI_PURPLE = u"\u001B[35m"
+ANSI_CYAN = u"\u001B[36m"
+ANSI_WHITE = u"\u001B[37m"
 
-ANSI_BLACK_BACK       = u"\u001B[40m"
-ANSI_RED_BACK         = u"\u001B[41m"
-ANSI_GREEN_BACK       = u"\u001B[42m"
-ANSI_YELLOW_BACK      = u"\u001B[43m"
-ANSI_BLUE_BACK        = u"\u001B[44m"
-ANSI_PURPLE_BACK      = u"\u001B[45m"
-ANSI_CYAN_BACK        = u"\u001B[46m"
-ANSI_WHITE_BACK       = u"\u001B[47m"
+ANSI_BLACK_BACK = u"\u001B[40m"
+ANSI_RED_BACK = u"\u001B[41m"
+ANSI_GREEN_BACK = u"\u001B[42m"
+ANSI_YELLOW_BACK = u"\u001B[43m"
+ANSI_BLUE_BACK = u"\u001B[44m"
+ANSI_PURPLE_BACK = u"\u001B[45m"
+ANSI_CYAN_BACK = u"\u001B[46m"
+ANSI_WHITE_BACK = u"\u001B[47m"
+
 
 def colors():
-  #color options
-  print(ANSI_BLACK, ANSI_WHITE_BACK, "Black", ANSI_RESET)
-  print(ANSI_GREEN, "Green")
-  print(ANSI_YELLOW, "Yellow")
-  print(ANSI_BLUE, "Blue")
-  print(ANSI_PURPLE, "Purple")
-  print(ANSI_CYAN, "Cyan")
-  print(ANSI_WHITE, "White")
+    # color options
+    print(ANSI_BLACK, ANSI_WHITE_BACK, "Black", ANSI_RESET)
+    print(ANSI_GREEN, "Green")
+    print(ANSI_YELLOW, "Yellow")
+    print(ANSI_BLUE, "Blue")
+    print(ANSI_PURPLE, "Purple")
+    print(ANSI_CYAN, "Cyan")
+    print(ANSI_WHITE, "White")
 
-  #position print: print("\033[4;15HHello")
-  #variable used to show posible adaptation to reusable function
-  print(SAVE_CURSOR)
-  row = str(6)
-  col = str(20)
-  message_move = "r"+row+";"+"c"+col
-  cursor_move = BUILDER_ESCAPE + row + ";" + col + "H"
-  print(cursor_move, message_move)
-  print(RESTORE_CURSOR)
+    # position print: print("\033[4;15HHello")
+    # variable used to show posible adaptation to reusable function
+    print(SAVE_CURSOR)
+    row = str(6)
+    col = str(20)
+    message_move = "r" + row + ";" + "c" + col
+    cursor_move = BUILDER_ESCAPE + row + ";" + col + "H"
+    print(cursor_move, message_move)
+    print(RESTORE_CURSOR)
 
 
 def load():
@@ -95,6 +96,7 @@ def load():
         print(bar, end='')
         sys.stdout.flush()
     print()
+
 
 def loading(count):
     all_progress = [0] * count
@@ -111,13 +113,15 @@ def loading(count):
         sys.stdout.write(u"\u001b[" + str(count) + "A")  # Move up
         for progress in all_progress:
             width = progress / 4
-            print( "[" + "#" * int(width) + " " * int(25 - width) + "]")
+            print("[" + "#" * int(width) + " " * int(25 - width) + "]")
+
 
 def clear():
-  print(ANSI_CLEAR_SCREEN, ANSI_HOME_CURSOR)
+    print(ANSI_CLEAR_SCREEN, ANSI_HOME_CURSOR)
+
 
 def main():
-  clear()
-  colors()
-  load()
-  loading(10)
+    clear()
+    colors()
+    load()
+    loading(10)

@@ -5,7 +5,7 @@
 *
 * Exploration Ideas
 * 1. Add names or other properties to the monkeys
-* 2. Add to and finish the poem
+* 2. Add text to finish the poem, add color
 * 3. Experiment with animation, it is possible with code give to add more than two steps to animation
 * 4. Build a project with your own ascii/unicode art (ie design a logo or signature)
 *
@@ -17,7 +17,6 @@
 * C. Learn an object and list of objects
 * D. Make a generic (ie Anime class) from which Monkey is a child.  This could lead to different types of animations.
 """
-
 
 """Create string art objects to animate in console.  No strict convention to Unicode, implemnted on MacOS.
 
@@ -32,7 +31,8 @@ Works best on a console or terminal that supports screen clear: print("\033[H\03
   cl.print_monkeys() 
 """
 
-class Classy():
+
+class Classy:
     """Utility class
 
     Builds the foundation for the Monkey Jumper poem.
@@ -41,6 +41,7 @@ class Classy():
         Monkeys: A table of Monkey instances.
         part_list: A description of monkey parts
     """
+
     # Constructor occurs when Classy is instatiated
     def __init__(self):
         print("Hello Series: classy.py")  # illustrative identification message
@@ -149,7 +150,7 @@ class Classy():
 
                 # cycle through same parts for each monkey
                 for monkey in self.get_monkeys():
-                    index = counter % monkey.get_animations()   # cycles based on number of animations
+                    index = counter % monkey.get_animations()  # cycles based on number of animations
                     print(monkey.get_part(index, part), end="\t")
                 print()
 
@@ -171,6 +172,7 @@ class Monkey:
           anime: A table of Monkey part animations.
           head, chin, body, legs: Description of parts.
     """
+
     # initialize database
     def __init__(self, part_names, head, chin, body, legs):
         # Database of monkey parts
@@ -196,10 +198,12 @@ class Monkey:
     # get monkey part
     def get_part(self, index, part):
         return self.get_anime(index)[part]
-  
-def main(): 
-  cl = Classy()
-  cl.print_monkeys()
+
+
+def main():
+    cl = Classy()
+    cl.print_monkeys()
+
 
 if __name__ == "__main__":
-  Classy().main(); 
+    main()

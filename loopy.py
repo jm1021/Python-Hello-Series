@@ -4,7 +4,7 @@
  * Level: Medium
  *
  * Exploration Ideas
- * 1. Build more or entire rhyme for the "Monkey Jumpers" countdown poem
+ * 1. Build more or entire rhyme for the "Monkey Jumpers" countdown poem (or create your own poem/countdown)
  * 2. Add names or other properties to the monkeys
  * 3. Print these monkeys horizontally
  *
@@ -18,14 +18,14 @@
  * E. Build a class diagram on a monkey as an object versus two-dimensional array
 """
 
+
 def main():
     print("Hello Series: loopy.py")  # identification message
     Red = "\u001b[31m"
     Green = "\u001b[32m"
-    Yellow ="\u001b[33m"
+    Yellow = "\u001b[33m"
     Blue = "\u001b[34m"
     Magenta = "\u001b[35m"
-
 
     """ 2D array data assignment """
     monkeys = [
@@ -74,7 +74,7 @@ def main():
         print(str(i) + " little monkeys jumping on the bed...")
 
         # cycle through monkeys that are left in poem countdown
-        for row in range(i-1,-1,-1):  # cycles through remaining monkeys in countdown
+        for row in range(i - 1, -1, -1):  # cycles through remaining monkeys in countdown
 
             # cycles through monkey part by part
             for col in range(len(monkeys[row])):
@@ -82,12 +82,13 @@ def main():
                 print(monkeys[row][col] + " ")
 
             # this new line gives separation between stanza of poem
-            print("\u001b[0m") #reset color
+            print("\u001b[0m")  # reset color
 
     # out of all the loops, prints finishing messages
     print("No more monkeys jumping on the bed")
     print("0000000000000000000000000000000000")
     print("             THE END              ")
 
-if __name__ == "__main__": 
-  main()
+
+if __name__ == "__main__":
+    main()

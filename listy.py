@@ -17,7 +17,7 @@ Explore online tutorials
 https://www.geeksforgeeks.org/python-list/?ref=lbp
 """
 
-print("Hello Series: listy.py")   #identification message
+print("Hello Series: listy.py")  # identification message
 
 # Build a list of numbers
 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
@@ -32,7 +32,7 @@ for i in range(len(numbers)):
         list.append(numbers[i])
 print(list)
 # Build a list of numbers divisible by 5 in one step
-print([*range(0, 100+1, 5)])
+print([*range(0, 100 + 1, 5)])
 
 # List of numbers, referencing items in list and formatting for output
 list1 = [1.2345, 2.34, 3.45678, 4.5]
@@ -52,22 +52,22 @@ print(list2_out)
 print(list3_out)
 print()
 
-#LIST copy by value and by reference
+# LIST copy by value and by reference
 l0 = [1, 5, 4, 2, 6, 3]
 l1 = []
-for i in range(len(l0)):    #loop for amount of items in l0
-    l1.append(l0[i])    #append to l1
-l1.sort()                   #sort new list
-print(f"old l0: {l0}")          #print original list
-print(f"new l1: {l1}")          #print sorted list
+for i in range(len(l0)):  # loop for amount of items in l0
+    l1.append(l0[i])  # append to l1
+l1.sort()  # sort new list
+print(f"old l0: {l0}")  # print original list
+print(f"new l1: {l1}")  # print sorted list
 l2 = l1
-l2.sort(reverse=True)           #"""reference, be careful"""
-print(f"reprint l1: {l1}")      #reprint l1
-print(f"new l2: {l2}")          #print reverse sorted list
+l2.sort(reverse=True)  # """reference, be careful"""
+print(f"reprint l1: {l1}")  # reprint l1
+print(f"new l2: {l2}")  # print reverse sorted list
 print()
 
-#LIST with dictionary records
-#Dictionary Tags defined as scalars
+# LIST with dictionary records
+# Dictionary Tags defined as scalars
 FirstName = "First"
 LastName = "Last"
 MaidenName = "Maiden"
@@ -75,17 +75,19 @@ DOB = "DOB"
 Residence = "Residence"
 Email = "email"
 
-#Dictionary Records placed in a list
+# Dictionary Records placed in a list
 InfoDb = []
-InfoDb.append({FirstName: "John", LastName: "Mortensen", DOB: "October 21", Residence: "San Diego", Email: "jmortensen@powayusd.com"})
-InfoDb.append({FirstName: "Lora", LastName: "Mortensen", MaidenName: "Morgan", DOB: "September 23", Residence: "San Diego"})
+InfoDb.append({FirstName: "John", LastName: "Mortensen", DOB: "October 21", Residence: "San Diego",
+               Email: "jmortensen@powayusd.com"})
+InfoDb.append(
+    {FirstName: "Lora", LastName: "Mortensen", MaidenName: "Morgan", DOB: "September 23", Residence: "San Diego"})
 InfoDb.append({FirstName: "Trent", LastName: "Mortensen", DOB: "January 2", Residence: "Wenatchee"})
 InfoDb.append({FirstName: "Corey", LastName: "Mortensen", DOB: "March 24", Residence: "Seattle"})
 InfoDb.append({FirstName: "Tiernan", LastName: "Mortensen", DOB: "August 2", Residence: "San Diego"})
 InfoDb.append({FirstName: "Claire", LastName: "Ring", MaidenName: "Mortensen", DOB: "July 7", Residence: "Oak Harbor"})
 InfoDb.append({FirstName: "Shay", LastName: "Mortensen", DOB: "May 2", Residence: "San Diego"})
 print(InfoDb)
-#Walk the list and print each dictionary record
+# Walk the list and print each dictionary record
 for Info in InfoDb:
     print(
         "\n",
@@ -101,7 +103,7 @@ for Info in InfoDb:
 
     )
 
-#Make a computer inventory, as we do this learn some attributes on your computer
+# Make a computer inventory, as we do this learn some attributes on your computer
 ComputerDb = []
 ComputerDb.append({'name': 'raspberrypi', 'ram': '4GB', 'ssd': '256GB'})
 ComputerDb.append({'name': 'macbook pro', 'ram': '16GB', 'ssd': '512GB'})

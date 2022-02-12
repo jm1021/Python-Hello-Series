@@ -55,47 +55,47 @@ def convert(phrase):
     convert_engine(phrase, "utf-8")
     print()
     # http://www.fileformat.info/info/charset/UTF-16/list.htm
-    #convert_engine(phrase, "utf-16")
-    #print()
+    # convert_engine(phrase, "utf-16")
+    # print()
+
 
 def main():
-  #whitespace = ' \t\n\r\v\f'
-  ascii_lowercase = 'abcdefghijklmnopqrstuvwxyz'
-  ascii_uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-  ascii_letters = ascii_lowercase + ascii_uppercase
-  digits = '0123456789'
-  hexdigits = digits + 'abcdef' + 'ABCDEF'
-  octdigits = '01234567'
-  punctuation = r"""!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"""
-  #printable = digits + ascii_letters + punctuation + whitespace
+    # whitespace = ' \t\n\r\v\f'
+    ascii_lowercase = 'abcdefghijklmnopqrstuvwxyz'
+    ascii_uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    ascii_letters = ascii_lowercase + ascii_uppercase
+    digits = '0123456789'
+    hexdigits = digits + 'abcdef' + 'ABCDEF'
+    octdigits = '01234567'
+    punctuation = r"""!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"""
+    # printable = digits + ascii_letters + punctuation + whitespace
 
-  convert(ascii_lowercase[0:4])
-  convert(ascii_uppercase[0:4])
-  #convert(ascii_letters)
-  convert(digits)
-  convert(punctuation)
-  #convert(printable)
+    convert(ascii_lowercase[0:4])
+    convert(ascii_uppercase[0:4])
+    # convert(ascii_letters)
+    convert(digits)
+    convert(punctuation)
+    # convert(printable)
 
-  monkey_head = "ʕ༼ ◕_◕ ༽ʔ"
-  monkey_chin ="  \\_⎏_/ "
-  monkey_body = "  ++1++ "
-  monkey_legs = "   ⌋ ⌊  "
-  monkey = monkey_head + monkey_chin + monkey_body + monkey_legs
-  convert(monkey_head)
-  #convert(monkey)
+    monkey_head = "ʕ༼ ◕_◕ ༽ʔ"
+    monkey_chin = "  \\_⎏_/ "
+    monkey_body = "  ++1++ "
+    monkey_legs = "   ⌋ ⌊  "
+    monkey = monkey_head + monkey_chin + monkey_body + monkey_legs
+    convert(monkey_head)
+    # convert(monkey)
 
-  pictograms = "象形字 xiàngxíngzì"
-  ideograms = "指事字 zhǐshìzì"
-  idea_characters = "会意字 / 會意字 huìyìzì"
-  rebus = "假借字 jiǎjièzì"
-  chinese_characters = pictograms + ideograms + idea_characters + rebus
-  convert(pictograms)
-  #convert(chinese_characters)
+    pictograms = "象形字 xiàngxíngzì"
+    ideograms = "指事字 zhǐshìzì"
+    idea_characters = "会意字 / 會意字 huìyìzì"
+    rebus = "假借字 jiǎjièzì"
+    chinese_characters = pictograms + ideograms + idea_characters + rebus
+    convert(pictograms)
+    # convert(chinese_characters)
 
-  apple = u"🍏"
-  fruits = "🍊🍌🍉"
-  sports = "🏄🏼‍♂️🏄🏽‍♀️🚣🏻⛹🏾"
-  emojis = fruits + sports
-  convert(apple)
-  #convert(emojis)
-
+    apple = u"🍏"
+    fruits = "🍊🍌🍉"
+    sports = "🏄🏼‍♂️🏄🏽‍♀️🚣🏻⛹🏾"
+    emojis = fruits + sports
+    convert(apple)
+    # convert(emojis)

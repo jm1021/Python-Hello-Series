@@ -2,13 +2,10 @@
 menuy.py - function style menu
 """
 
-
 # Main menu example
 def menu(banner, options):
     # header for menu
-    print()
     print(banner)
-
     # build a dictionary from options
     prompts = {0: ["Exit", None]}
     for op in options:
@@ -22,25 +19,30 @@ def menu(banner, options):
     # get user choice
     choice = input("Type your choice> ")
 
+    # validate choice and run
     # execute selection
-    try:  # try converting to integer
-        # convert to number
+    # convert to number
+    try:
         choice = int(choice)
-        if choice == 0:  # exit choice, stop loop
-            return  # return means leave function
-        try:  # try to run as playground function
+        if choice == 0:
+            # stop
+            return
+        try:
+            # try as function
             action = prompts.get(choice)[1]
-            exec(open(action).read())
-        finally:
-            try:  # try to run as function
-                action()
-            finally:
-                print(f"Bad action: {action}")
+            action()
+        except TypeError:
+            try:  # try as playground style
+                exec(open(action).read())
+            except FileNotFoundError:
+                print(f"File not found!: {action}")
             # end function try
-        # end playground try
-    except ValueError:  # not a number error
+        # end prompts try
+    except ValueError:
+        # not a number error
         print(f"Not a number: {choice}")
-    finally:  # traps all other errors
+    except UnboundLocalError:
+        # traps all other errors
         print(f"Invalid choice: {choice}")
     # end validation try
 
